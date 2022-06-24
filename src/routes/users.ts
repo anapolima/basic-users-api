@@ -1,4 +1,4 @@
-import { CreateUser } from "../controllers/create-user";
+import { CreateUser } from "../controllers";
 import Router from "express";
 
 const route = Router();

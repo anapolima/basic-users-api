@@ -7,11 +7,11 @@ class CreateUser
     private service = CreateUserService;
     private responseWriter = ResponseWriter;
 
-    public handle (req: Request, res: Response)
+    public async handle (req: Request, res: Response)
     {
         try
         {
-            const response = new this.service().execute(req.body);
+            const response = await new this.service().execute(req.body);
             this.responseWriter.success(res, 201, response);
         }
         catch (err)
